@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication System</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required>
+        <br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        <br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <form id="registerForm" style="margin-top: 20px;">
+        <h2>Register</h2>
+        <label for="registerUsername">Username:</label>
+        <input type="text" id="registerUsername" required>
+        <br>
+        <label for="registerPassword">Password:</label>
+        <input type="password" id="registerPassword" required>
+        <br>
+        <button type="button" onclick="register()">Register</button>
+    </form>
+
+    <div id="securedPage" style="display: none; margin-top: 20px;">
+        <h2>Secured Page</h2>
+        <p>Welcome, <span id="usernameDisplay"></span>!</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <button id="adminSecuredPageBtn" style="display: none; margin-top: 20px;" onclick="showSecuredPage('admin', 'admin')">Admin Secured Page</button>
+    
+    <div id="adminSecuredPage" style="display: none; margin-top: 20px;">
+        <h2>Admin Secured Page</h2>
+        <p>Welcome, <span id="adminUsernameDisplay"></span>!</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="log.css"></script>
+</body>
+</html>
